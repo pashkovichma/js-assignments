@@ -54,11 +54,9 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-   /* let res = (value1+value2)/2;
-    if(value1 == Infinity || value2 == Infinity){
-        res = Infinity;
-    }
-    return(res);*/
+    let res = (value1+value2)/2;;
+    
+    return(res);
 }
 
 /**
@@ -117,7 +115,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    var res = Math.PI;
+    var res = 0;
     if (x1 == x2 && y1 == y2) {
         res =  Math.PI;
     } else if (x1 != x2 && y1 != y2) {
@@ -155,8 +153,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    let a = 1 + value;
-    return (a - 1);
+    return (parseFloat(value, 10));
 }
 
 /**
@@ -174,7 +171,7 @@ function parseNumberFromString(value) {
  */
 function getParallelipidedDiagonal(a,b,c) {
     let x = Math.sqrt(a*a + b*b);
-    let y = Math.sqrt(Math.sqrt(a*a + b*b)*Math.sqrt(a*a + b*b) + c*c);
+    let y = Math.sqrt(Math.sqrt(x*x + c*c)*Math.sqrt(x*x + c*c));
     return y;
 }
 
@@ -224,14 +221,13 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    /*let res = true;
-    for (let i = 2; i < n; n++){
-        
+    let res = true;
+    for (let i = 2; i <= n; i++){  
         if ((n%2) == 0){
             res = false;
         }
     }
-    return res;*/
+    return res;
 }
 
 /**

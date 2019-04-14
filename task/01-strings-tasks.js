@@ -282,7 +282,7 @@ function encodeToRot13(str) {
  */
 function isString(value) {
     let res = false;
-    if (typeof a == 'string'){
+    if (typeof a === 'string'){
         res = true;
     }
     return res;
